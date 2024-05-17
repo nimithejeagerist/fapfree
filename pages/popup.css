@@ -1,0 +1,89 @@
+html, body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: black;
+    color: #fff;
+    padding: 0.5rem;
+    position: relative;  /* Add positioning context */
+    z-index: 1;  /* Ensure navbar is on top */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+    position: relative;  /* Add positioning context */
+    z-index: 2;  /* Ensure list items are on top */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links img {
+    position: relative;  /* Ensure image is positioned above other elements */
+    z-index: 2;  /* Ensure image is on top */
+}
+
+.light-mode body {
+    background-color: white !important;
+    color: black;
+}
+
+.light-mode nav {
+    background-color: white;
+    color: black;
+}
+
+footer {
+    background-color: black;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #333;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .nav-links a {
+    padding: 0.5rem;
+  }
+}
