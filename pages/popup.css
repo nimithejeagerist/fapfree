@@ -3,6 +3,11 @@
     src: url(/fonts/coffee_normal/Coffee\ Normal.ttf);
 }
 
+@font-face {
+    font-family: 'Recky';
+    src: url(/fonts/recky/Recky.ttf);
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -103,7 +108,7 @@ img:hover {
     align-items: center;
     margin: 0px 15px;
     padding: 0.5rem;
-    border-top: 1px solid #333;
+    border-top: 1px solid white;
 }
 
 .custom-controls {
@@ -117,6 +122,8 @@ img:hover {
     background-color: #444;
     border: none;
     color: white;
+    font-weight: thin;
+    font-family: 'Recky';
     padding: 10px;
     margin: 0 5px;
     cursor: pointer;
@@ -241,13 +248,13 @@ body.light-mode .custom-controls {
 }
 
 body.light-mode .control-button {
-    background-color: #444;
-    color: #f7f7f7;
+    background-color: #fcfcfc;
+    color: black;
     border: none;
 }
 
 body.light-mode .control-button:hover {
-    background-color: #555;
+    background-color: #f7f7f7;
 }
 
 body.light-mode input[type="range"]::-webkit-slider-runnable-track {
@@ -279,3 +286,6 @@ body.light-mode input[type="range"]::-ms-thumb {
     border: 2px solid #777;
 }
 
+body.light-mode .site-footer {
+    border-color: #333;
+}
