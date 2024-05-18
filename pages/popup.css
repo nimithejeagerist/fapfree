@@ -124,6 +124,7 @@ img:hover {
     color: white;
     font-weight: thin;
     font-family: 'Recky';
+    font-size: large;
     padding: 10px;
     margin: 0 5px;
     cursor: pointer;
