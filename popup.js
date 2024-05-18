@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.toggle('light-mode');
         const icon = document.getElementById('mode-icon');
         if (document.body.classList.contains('light-mode')) {
-            icon.src = '/assets/brightness-alt-high-fill.svg';
+            icon.src = 'brightness-alt-high-fill.svg';
         } else {
-            icon.src = '/assets/moon-stars-fill.svg';
+            icon.src = 'moon-stars-fill.svg';
         }
     });
 });

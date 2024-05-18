@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Coffee';
-    src: url(/fonts/coffee_normal/Coffee\ Normal.ttf);
+    src: url(/coffee_normal/Coffee\ Normal.ttf);
 }
 
 @font-face {
     font-family: 'Recky';
-    src: url(/fonts/recky/Recky.ttf);
+    src: url(/recky/Recky.ttf);
 }
 
 html, body {
