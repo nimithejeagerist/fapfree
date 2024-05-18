@@ -17,30 +17,26 @@ let blockedWebsites = [
 ];
 
 function updateRules() {
-  const rules = blockedWebsites.map((site, index) => ({
-    id: index + 1,
-    priority: 1,
-    action: { type: "block" },
-    condition: { urlFilter: `*://${site}/*`, resourceTypes: ["main_frame"] }
-  }));
-
-  chrome.declarativeNetRequest.updateDynamicRules({
-    removeRuleIds: rules.map(rule => rule.id),
-    addRules: rules
-  }, () => {
-    console.log('Rules updated:', rules);
-  });
+  chrome.webRequest.onBeforeRequest.addListener(
+    function(details) {
+      const url = new URL(details.url);
+      if (blockedWebsites.includes(url.hostname)) {
+        return { cancel: true };
+      }
+    },
+    { urls: ["<all_urls>"] },
+    ["blocking"]
+  );
 }
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.get('blockedWebsites', (data) => {
     if (data.blockedWebsites) {
       blockedWebsites = data.blockedWebsites;
-      updateRules();
     } else {
       chrome.storage.sync.set({ blockedWebsites });
-      updateRules();
     }
+    updateRules();
   });
 });
 
