@@ -234,3 +234,48 @@ body.light-mode img {
 body.light-mode #main-video {
     box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.5);
 }
+
+body.light-mode .custom-controls {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+body.light-mode .control-button {
+    background-color: #444;
+    color: #f7f7f7;
+    border: none;
+}
+
+body.light-mode .control-button:hover {
+    background-color: #555;
+}
+
+body.light-mode input[type="range"]::-webkit-slider-runnable-track {
+    background: #444;
+}
+
+body.light-mode input[type="range"]::-webkit-slider-thumb {
+    background: #f7f7f7;
+    border: 2px solid #777;
+}
+
+body.light-mode input[type="range"]::-moz-range-track {
+    background: #444;
+}
+
+body.light-mode input[type="range"]::-moz-range-thumb {
+    background: #f7f7f7;
+    border: 2px solid #777;
+}
+
+body.light-mode input[type="range"]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+body.light-mode input[type="range"]::-ms-thumb {
+    background: #f7f7f7;
+    border: 2px solid #777;
+}
+
