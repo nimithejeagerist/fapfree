@@ -3,7 +3,14 @@
     src: url(/fonts/coffee_normal/Coffee\ Normal.ttf);
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #0d0d0d;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -71,10 +78,11 @@ img:hover {
 }
 
 .content {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 #main-video {
@@ -88,6 +96,22 @@ img:hover {
     transform: scale(1.1);
 }
 
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d0d0d;
+    margin: 0px 15px;
+    padding: 0.5rem;
+    border-top: 1px solid #333;
+}
+
+.company {
+    font-size: 12px;
+}
+
+
+/* Light mode */
 body.light-mode {
     background-color: #f7f7f7;
     color: black;
