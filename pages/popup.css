@@ -20,6 +20,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 nav {
@@ -29,6 +30,7 @@ nav {
     padding: 0.5rem;
     position: relative;
     z-index: 1;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .navbar {
@@ -249,13 +251,13 @@ body.light-mode .custom-controls {
 }
 
 body.light-mode .control-button {
-    background-color: #fcfcfc;
+    background-color: #e0e0e0;
     color: black;
     border: none;
 }
 
 body.light-mode .control-button:hover {
-    background-color: #f7f7f7;
+    background-color: #cccccc;
 }
 
 body.light-mode input[type="range"]::-webkit-slider-runnable-track {
